@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sophia Chance - Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&family=Urbanist:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        * Prefixed by https://autoprefixer.github.io
+        * PostCSS: v8.4.14,
+        * Autoprefixer: v10.4.7
+        * Browsers: last 4 version
+        */
+        
+        a {
+          color: #357b70;
+        }
+        
+        body {
+            background-color: lightgrey;
+            font-family: 'urbanist', sans-serif;
+          font-weight: 400;
+        }
+        
+        .page-header {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+        }
+        
+        .page-header_item {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 200px;
+                  flex: 0 1 200px;
+        }
+        
+        .page-header_item:last-child {
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
+          text-align: right;
+        }
+        
+        .navigation-list {
+          list-style-type: none;
+        }
+        
+        .navigation-list li {
+          display: inline-block;
+          margin-left: 15px;
+        }
+        
+        .navigation-list_item::before
+        .navigation-list_item::after {
+          position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            content: "";
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        .navigation-list_item:before {
+          top: 0px;
+            -webkit-transform: translateY(10px);
+                -ms-transform: translateY(10px);
+                    transform: translateY(10px);
+        }
+        
+        .navigation-list_item::after {
+          bottom: 0px;
+            -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                    transform: translateY(-10px);
+        }
+        
+        .navigation-list_item:hover::before,
+        .navigation-list_item:hover::after
+        {
+          opacity: 1;
+            -webkit-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                    transform: translateY(0px);
+        }
+        
+        a {
+            color: #357b70;
+          }
+          a:visited { 
+            /* visited link */
+            color: #05676e;
+          }
+        
+          a:hover a:focus {
+            /* No underlining when hovering over a link */
+            text-decoration: none;
+          }
+          
+          a:active {
+            /* selected link */
+            color: #489c79;
+          }
+        
+          button {
+            border: none;
+            font-family: inherit;
+        
+            background-color: #357b70;
+            color: #fff;
+            text-decoration: none;
+        
+            padding: 10px;
+            border-radius: 3px;
+        
+            border-bottom: 2px solid rgb(0,0,0,0.3);
+          }
+        
+          button:hover, button:focus {
+            cursor: pointer;
+            opacity: .8;
+          }
+        
+          .button__secondary {
+            background-color: #e0b354;
+            color: #2b2b2b;
+          }
+        
+          li {
+            color: #00675c;
+          }
+        
+          div {
+            padding: 10px; /* Adds a 10px inner spacing to all sides*/
+            margin: 10px; /* Adds a 10px outer spacing to all sides*/
+            border: 1px solid black; /* Attributes describe: thickness, type, color*/
+          }
+        
+          .header {
+            margin: 0 auto;
+            text-align: center;
+          }
+        
+          .profile {
+            max-width: 700px;
+            margin: 0 auto;
+          }
+        
+          .profile_portrait {
+            float: left;
+            width: 250px;
+            margin-right: 40px;
+            height: auto;
+            border-radius: 50%;
+          }
+        .page-footer {
+          clear: both;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: center;
+        }
+        
+        * {
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+        }
+        
+        .grid {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 20px;
+        }
+        
+        .grid-item {
+          background-color: lightgrey
+        }
+        
+        .grid__item:last-child {
+          -ms-grid-column: 3;
+              grid-column-start: 3;
+          -ms-grid-column-span: 0;
+          grid-column-end: 3;
+          -ms-grid-row: 1;
+              grid-row-start: 1;
+          -ms-grid-row-span: 2;
+          grid-row-end: 3;
+        }
+        
+        .aboutme {
+          clear: both;
+          display: -ms-grid;
+          display: grid;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          width: 800px;
+          height: auto;
+          border: 1px solid black;
+          margin: 20px;
+          padding: 10px;
+        }
+        
+        .button {
+          border: none;
+          display: inline-block;
+          font-family: inherit;
+          background-color: #357b70;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 3px;
+          border-bottom: 2px solid rgba(0,0,0, 0.3);
+          -webkit-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          transition: opacity 0.2s;
+        }
+        
+        button {
+          border: none;
+          display: inline-block;
+          font-family: inherit;
+          background-color: #357b70;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 3px;
+          border-bottom: 2px solid rgba(0,0,0, 0.3);
+          -webkit-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          transition: opacity 0.2s;
+        }
+        
+        button:hover,
+        button:focus,
+        .button:hover,
+        .button:focus {
+          cursor: pointer;
+          opacity: .8;
+        }
+        
+        @media all and (max-width: 500px) {
+          .grid {
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        @media all and (min-width: 500px) and (max-width: 750px){
+          .grid {
+            -ms-grid-columns: 1fr 20px 1fr;
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        
+        @media all and (max-width: 750px) {
+          .grid {
+            grid-gap: 10px;
+          }
+          .grid__item:last-child {
+            grid-column: auto / auto;
+            grid-row: auto / auto;
+          }
+          h1 {
+            font-size: 22px;
+          }
+        }
+        
+        @-webkit-keyframes color-change {
+          0% {
+            fill: #edc655;
+          }
+          50% {
+            fill: #fcffad;
+          }
+          100% {
+            fill: #f76414;
+          }
+        }
+        
+        @keyframes color-change {
+          0% {
+            fill: #edc655;
+          }
+          50% {
+            fill: #fcffad;
+          }
+          100% {
+            fill: #f76414;
+          }
+        }
+        
+        .sun {
+          -webkit-animation: 4s color-change infinite alternate linear;
+                  animation: 4s color-change infinite alternate linear;
+        }
+        
+        @-webkit-keyframes cloud-move {
+          from {
+            -webkit-transform: translate(0, 50px);
+                    transform: translate(0, 50px);
+          }
+          to {
+            -webkit-transform: translate(200px, 50px);
+                    transform: translate(200px, 50px);
+          }
+        }
+        
+        @keyframes cloud-move {
+          from {
+            -webkit-transform: translate(0, 50px);
+                    transform: translate(0, 50px);
+          }
+          to {
+            -webkit-transform: translate(200px, 50px);
+                    transform: translate(200px, 50px);
+          }
+        }
+        
+        @-webkit-keyframes cloud-move-reverse {
+          from {
+            -webkit-transform: translate(446px, 48px);
+                    transform: translate(446px, 48px);
+          }
+          to {
+            -webkit-transform: translate(100px, 48px);
+                    transform: translate(100px, 48px);
+          }
+        }
+        
+        @keyframes cloud-move-reverse {
+          from {
+            -webkit-transform: translate(446px, 48px);
+                    transform: translate(446px, 48px);
+          }
+          to {
+            -webkit-transform: translate(100px, 48px);
+                    transform: translate(100px, 48px);
+          }
+        }
+        
+        .cloud-front {
+          -webkit-animation-duration: 30s;
+                  animation-duration: 30s;
+          -webkit-animation-name: cloud-move;
+                  animation-name: cloud-move;
+          -webkit-animation-iteration-count: infinite;
+                  animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+                  animation-direction: alternate;
+          -webkit-animation-timing-function: linear;
+                  animation-timing-function: linear;
+        }
+        
+        .cloud-back{
+          -webkit-animation-duration: 34s;
+                  animation-duration: 34s;
+          -webkit-animation-name: cloud-move-reverse;
+                  animation-name: cloud-move-reverse;
+          -webkit-animation-iteration-count: infinite;
+                  animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+                  animation-direction: alternate;
+          animation-timing-function.example {
+            display: -ms-grid;
+            display: grid;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+            background: -o-linear-gradient(top, white, black);
+            background: linear-gradient(to bottom, white, black);
+        }
+        }
+        * Prefixed by https://autoprefixer.github.io
+        * PostCSS: v8.4.14,
+        * Autoprefixer: v10.4.7
+        * Browsers: last 4 version
+        */
+        
+        a {
+          color: #357b70;
+        }
+        
+        body {
+            background-color: lightgrey;
+            font-family: 'urbanist', sans-serif;
+          font-weight: 400;
+        }
+        
+        .page-header {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+        }
+        
+        .page-header_item {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 200px;
+                  flex: 0 1 200px;
+        }
+        
+        .page-header_item:last-child {
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
+          text-align: right;
+        }
+        
+        .navigation-list {
+          list-style-type: none;
+        }
+        
+        .navigation-list li {
+          display: inline-block;
+          margin-left: 15px;
+        }
+        
+        .navigation-list_item::before
+        .navigation-list_item::after {
+          position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            content: "";
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        .navigation-list_item:before {
+          top: 0px;
+            -webkit-transform: translateY(10px);
+                -ms-transform: translateY(10px);
+                    transform: translateY(10px);
+        }
+        
+        .navigation-list_item::after {
+          bottom: 0px;
+            -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                    transform: translateY(-10px);
+        }
+        
+        .navigation-list_item:hover::before,
+        .navigation-list_item:hover::after
+        {
+          opacity: 1;
+            -webkit-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                    transform: translateY(0px);
+        }
+        
+        a {
+            color: #357b70;
+          }
+          a:visited { 
+            /* visited link */
+            color: #05676e;
+          }
+        
+          a:hover a:focus {
+            /* No underlining when hovering over a link */
+            text-decoration: none;
+          }
+          
+          a:active {
+            /* selected link */
+            color: #489c79;
+          }
+        
+          button {
+            border: none;
+            font-family: inherit;
+        
+            background-color: #357b70;
+            color: #fff;
+            text-decoration: none;
+        
+            padding: 10px;
+            border-radius: 3px;
+        
+            border-bottom: 2px solid rgb(0,0,0,0.3);
+          }
+        
+          button:hover, button:focus {
+            cursor: pointer;
+            opacity: .8;
+          }
+        
+          .button__secondary {
+            background-color: #e0b354;
+            color: #2b2b2b;
+          }
+        
+          li {
+            color: #00675c;
+          }
+        
+          div {
+            padding: 10px; /* Adds a 10px inner spacing to all sides*/
+            margin: 10px; /* Adds a 10px outer spacing to all sides*/
+            border: 1px solid black; /* Attributes describe: thickness, type, color*/
+          }
+        
+          .header {
+            margin: 0 auto;
+            text-align: center;
+          }
+        
+          .profile {
+            max-width: 700px;
+            margin: 0 auto;
+          }
+        
+          .profile_portrait {
+            float: left;
+            width: 250px;
+            margin-right: 40px;
+            height: auto;
+            border-radius: 50%;
+          }
+        .page-footer {
+          clear: both;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: center;
+        }
+        
+        * {
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+        }
+        
+        .grid {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 20px;
+        }
+        
+        .grid-item {
+          background-color: lightgrey
+        }
+        
+        .grid__item:last-child {
+          -ms-grid-column: 3;
+              grid-column-start: 3;
+          -ms-grid-column-span: 0;
+          grid-column-end: 3;
+          -ms-grid-row: 1;
+              grid-row-start: 1;
+          -ms-grid-row-span: 2;
+          grid-row-end: 3;
+        }
+        
+        .aboutme {
+          clear: both;
+          display: -ms-grid;
+          display: grid;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          width: 800px;
+          height: auto;
+          border: 1px solid black;
+          margin: 20px;
+          padding: 10px;
+        }
+        
+        .button {
+          border: none;
+          display: inline-block;
+          font-family: inherit;
+          background-color: #357b70;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 3px;
+          border-bottom: 2px solid rgba(0,0,0, 0.3);
+          -webkit-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          transition: opacity 0.2s;
+        }
+        
+        button {
+          border: none;
+          display: inline-block;
+          font-family: inherit;
+          background-color: #357b70;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 3px;
+          border-bottom: 2px solid rgba(0,0,0, 0.3);
+          -webkit-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          transition: opacity 0.2s;
+        }
+        
+        button:hover,
+        button:focus,
+        .button:hover,
+        .button:focus {
+          cursor: pointer;
+          opacity: .8;
+        }
+        
+        @media all and (max-width: 500px) {
+          .grid {
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        @media all and (min-width: 500px) and (max-width: 750px){
+          .grid {
+            -ms-grid-columns: 1fr 20px 1fr;
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        
+        @media all and (max-width: 750px) {
+          .grid {
+            grid-gap: 10px;
+          }
+          .grid__item:last-child {
+            grid-column: auto / auto;
+            grid-row: auto / auto;
+          }
+          h1 {
+            font-size: 22px;
+          }
+        }
+        
+        @-webkit-keyframes color-change {
+          0% {
+            fill: #edc655;
+          }
+          50% {
+            fill: #fcffad;
+          }
+          100% {
+            fill: #f76414;
+          }
+        }
+        
+        @keyframes color-change {
+          0% {
+            fill: #edc655;
+          }
+          50% {
+            fill: #fcffad;
+          }
+          100% {
+            fill: #f76414;
+          }
+        }
+        
+        .sun {
+          -webkit-animation: 4s color-change infinite alternate linear;
+                  animation: 4s color-change infinite alternate linear;
+        }
+        
+        @-webkit-keyframes cloud-move {
+          from {
+            -webkit-transform: translate(0, 50px);
+                    transform: translate(0, 50px);
+          }
+          to {
+            -webkit-transform: translate(200px, 50px);
+                    transform: translate(200px, 50px);
+          }
+        }
+        
+        @keyframes cloud-move {
+          from {
+            -webkit-transform: translate(0, 50px);
+                    transform: translate(0, 50px);
+          }
+          to {
+            -webkit-transform: translate(200px, 50px);
+                    transform: translate(200px, 50px);
+          }
+        }
+        
+        @-webkit-keyframes cloud-move-reverse {
+          from {
+            -webkit-transform: translate(446px, 48px);
+                    transform: translate(446px, 48px);
+          }
+          to {
+            -webkit-transform: translate(100px, 48px);
+                    transform: translate(100px, 48px);
+          }
+        }
+        
+        @keyframes cloud-move-reverse {
+          from {
+            -webkit-transform: translate(446px, 48px);
+                    transform: translate(446px, 48px);
+          }
+          to {
+            -webkit-transform: translate(100px, 48px);
+                    transform: translate(100px, 48px);
+          }
+        }
+        
+        .cloud-front {
+          -webkit-animation-duration: 30s;
+                  animation-duration: 30s;
+          -webkit-animation-name: cloud-move;
+                  animation-name: cloud-move;
+          -webkit-animation-iteration-count: infinite;
+                  animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+                  animation-direction: alternate;
+          -webkit-animation-timing-function: linear;
+                  animation-timing-function: linear;
+        }
+        
+        .cloud-back{
+          -webkit-animation-duration: 34s;
+                  animation-duration: 34s;
+          -webkit-animation-name: cloud-move-reverse;
+                  animation-name: cloud-move-reverse;
+          -webkit-animation-iteration-count: infinite;
+                  animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+                  animation-direction: alternate;
+          animation-timing-function.example {
+            display: -ms-grid;
+            display: grid;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+            background: -o-linear-gradient(top, white, black);
+            background: linear-gradient(to bottom, white, black);
+        }
+        }
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <header class="page-header">
+        <img src="img/placeholder-logo-3.png" alt="logo" class="page-header_item">
+        <nav class="main-navigation page-header_item">
+        <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+                <a href="index.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Home</a>
+            </li>
+            <li role="presentation"> 
+                <a href="about.html" role="menuitem" class="navigation-list_item">About</a>
+            </li>
+            <li role="presentation">
+                <a href="contact.html" role="menuitem" class="navigation-list_item">Contact</a>
+            </li>
+            <li role="presentation">
+                <a href="work.html" role="menuitem" class="navigation-list_item">My Work</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+   <!-- Main content -->
+<section>
+    <h1>Work</h1>
+    <div class="grid">
+    <div class="grid_item">
+        <h2>Mobile Web App</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id augue tincidunt, porttitor nulla sit amet, dapibus eros.</p>
+        <a href="#">See project on Linkedin</a>
+    </div>
+    <div class="grid_item">
+        <h2>Cat App Project</h2>
+        <p>Aliquam maximus lectus sit amet augue scelerisque, quis rutrum libero porta. Nunc venenatis, felis quis ultrices pretium, metus massa ullamcorper justo, at consectetur erat ipsum id nunc. Integer congue, mi sed mollis lacinia, tortor nisi elementum dolor, non luctus massa nulla sed odio. Nunc id dolor est. </p>
+        <a href="#">Check out my project on GitHub</a>
+    </div>
+    <div class="grid_item">
+        <h2>Music Portfolio</h2>
+        <p>Integer blandit, sapien at commodo lacinia, justo magna convallis ante, ut iaculis felis nibh id libero. Duis leo nisl, fermentum a eros in, pharetra accumsan mi. Donec convallis sapien quis accumsan rhoncus. Nam nunc arcu, imperdiet quis velit ac, interdum gravida massa. Sed aliquam, sapien quis sodales aliquam, nunc leo interdum nisl, ac gravida odio eros et ipsum.</p>
+        <a href="#">See this project on Twitter</a>
+    </div>
+    <div class="grid_item">
+        <h2>Financial Projection Analysis</h2>
+        <p>Sed cursus malesuada tortor, nec viverra dui mollis sed. Morbi posuere enim est, sit amet faucibus erat placerat non. Suspendisse potenti. Integer mattis sapien purus, eu pharetra velit scelerisque sit amet.</p>
+        <a href="#">See this project on Twitter</a>
+    </div>
+    <div class="grid_item">
+        <h2>Willo Project</h2>
+        <p>Maecenas quis dapibus metus, sed elementum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur in purus facilisis, tincidunt justo vitae, auctor ex. Nam eu lectus bibendum, accumsan augue in, tincidunt ante.</p>
+        <a href="#">See this project on Twitter</a>
+    </div>
+    </div>
+ </section>
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+        <img src="img/github_icon.svg" alt="Github">
+        <img src="img/twitter_icon.svg" alt="Twitter">
+        <img src="img/linkedin_icon.svg" alt="Linkedin">
+        </div>
+    </footer>
+    </body>
+</html>
