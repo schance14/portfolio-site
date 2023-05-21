@@ -369,7 +369,7 @@ a {
             animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
             animation-direction: alternate;
-    animation-timing-function.example {
+    animation-timing-function: .example {
       display: -ms-grid; 
       display: grid;
       -webkit-transition: all .5s;
