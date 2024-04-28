@@ -288,21 +288,24 @@ button:focus,
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
-@media screen and (min-width: 480px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .grid-item {
     font-size: 60px;
   }
+  p {
+    font-size: 50px;
+    
+  }
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .grid-item {
+  p {
     font-size: 128px;
   }
-}
-}
+}  */
+
