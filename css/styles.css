@@ -153,6 +153,13 @@ a {
     height: auto;
     border-radius: 50%;
   }
+.screenshot {
+  float: left;
+  padding: 20px;
+}
+.meetup_img {
+  padding: 20px;
+}
 .page-footer {
   clear: both;
   display: flex;
@@ -215,6 +222,7 @@ button:focus,
 
   h1 {
     font-size: 22px;
+    padding: 10px;
   }
 
 
@@ -299,6 +307,8 @@ button:focus,
     
   }
 }
+
+
 
 /* @media screen and (min-width: 768px) {
   .grid {
